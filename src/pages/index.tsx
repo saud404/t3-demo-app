@@ -182,7 +182,6 @@ const Home: NextPage = () => {
 
         {/* <div className="bg-hero"></div> */}
         {/* <Image src={Hero} alt="Home" className="mx-auto  md:w-full" /> */}
-        {/* <Quote /> */}
 
         {/* <Footer /> */}
       </main>
