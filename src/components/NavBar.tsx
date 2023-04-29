@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+"use client";
 import React, { useEffect, useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import Link from "next/link";
