@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { type NextPage } from "next";
 import Head from "next/head";
 // import "flowbite-datepicker";
-// import Datepicker from "tailwind-datepicker-react";
+import Datepicker from "tailwind-datepicker-react";
 import { SignIn, SignInButton, useUser } from "@clerk/nextjs";
 import { api } from "~/utils/api";
 // import type { RouterOutputs } from "~/utils/api";
