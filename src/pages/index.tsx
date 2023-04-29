@@ -13,7 +13,7 @@ import Image from "next/image";
 import Navbar from "~/components/NavBar";
 // import Footer from "~/components/Footer";
 // import Quote from "~/components/Quote";
-import Hero from "~/assets/images/home.jpg";
+// import Hero from "../assets/images/home.jpg";
 import Features from "~/components/Features";
 // const CreatePostWizard = () => {
 //   const { user } = useUser();
@@ -117,7 +117,11 @@ const Home: NextPage = () => {
       <main className="">
         <Navbar />
         <div className=" relative ">
-          <Image src={Hero} alt="Home" className="mx-auto h-[80vh] md:w-full" />
+          <Image
+            src="../assets/images/home.jpg"
+            alt="Home"
+            className="mx-auto h-[80vh] md:w-full"
+          />
 
           <div className=" md:left-94 absolute z-10 mx-auto mt-20 w-full rounded-2xl bg-white p-4  md:right-60 md:top-40 md:w-[70%]">
             <div className="  sm:pl-[0px] md:pl-[300px]">
