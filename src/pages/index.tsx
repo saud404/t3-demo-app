@@ -13,7 +13,7 @@ import Image from "next/image";
 import Navbar from "~/components/NavBar";
 // import Footer from "~/components/Footer";
 // import Quote from "~/components/Quote";
-import Hero from "../assets/images/home.jpg";
+import Hero from "~/assets/images/home.jpg";
 import Features from "~/components/Features";
 // const CreatePostWizard = () => {
 //   const { user } = useUser();
