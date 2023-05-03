@@ -5,6 +5,7 @@ import { BiMenu } from "react-icons/bi";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../assets/images/Asset 4.svg";
+import { TopHeader } from "./TopHeader";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -15,6 +16,9 @@ const Navbar = () => {
 
   return (
     <>
+      {/* <div className="">
+        <TopHeader />
+      </div> */}
       <header className="sticky top-0 z-20 flex items-center justify-between border-b-4 border-b-primary bg-header px-10 pt-10 font-medium text-white antialiased md:px-16">
         <div className="z-10 flex w-full items-center justify-between lg:w-auto">
           <Link href="/">

@@ -20,7 +20,7 @@ const Footer = () => {
                 className="text-white hover:text-primary"
                 href={agent ? "/profile" : "/team-profile"}
               >
-                Profile
+                Business Profile
               </a>
             </li>
             <li>
@@ -33,7 +33,7 @@ const Footer = () => {
                 className="text-white hover:text-primary"
                 href="/search-details"
               >
-                Search Details
+                Security & Protection
               </a>
             </li>
             <li>
@@ -50,13 +50,8 @@ const Footer = () => {
 
           <ul className="mb-0 list-none space-y-1">
             <li>
-              <a className="text-white hover:text-primary" href="/citizenship">
-                Citizenship
-              </a>
-            </li>
-            <li>
               <a className="text-white hover:text-primary" href="/real-estate">
-                Real-Estate
+                Communication preferences
               </a>
             </li>
             <li>
@@ -64,7 +59,7 @@ const Footer = () => {
                 className="text-white hover:text-primary"
                 href="/property-details"
               >
-                Property details
+                Affiliate
               </a>
             </li>
             <li>
@@ -105,7 +100,7 @@ const Footer = () => {
                 className="text-white hover:text-primary"
                 href="/property-management"
               >
-                Property Management
+                Parking Management
               </a>
             </li>
           </ul>
