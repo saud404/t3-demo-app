@@ -55,11 +55,11 @@ const DateChecker = () => {
 
     return (
       <>
-        <div className="flex w-full border-spacing-2 justify-around rounded-lg border-black bg-slate-200 font-mono shadow-lg">
+        <div className=" w-full border-spacing-2 justify-around rounded-lg border-black bg-slate-200 font-mono shadow-lg">
           <div className="bold  p-2 text-2xl">
             <p>
               Start Date :{" "}
-              <span className="pr-10">
+              <span className="pr-2 md:pr-10">
                 {" "}
                 {departureDate?.format?.("D MMMM YYYY")}
               </span>
@@ -81,66 +81,74 @@ const DateChecker = () => {
 
   return (
     <>
-      <div className="mx-auto w-[800px] gap-3  p-[10px] text-black md:flex">
-        <form onSubmit={handleSubmit(onSubmitDeparture)}>
-          <Controller
-            control={control}
-            name="date"
-            rules={{ required: true }} //optional
-            render={({
-              field: { onChange, name, value },
-              fieldState: { invalid, isDirty }, //optional
-              formState: { errors }, //optional, but necessary if you want to show an error message
-            }) => (
-              <>
-                <label className="text-xl">Departure Date</label>
-                <DatePicker
-                  value={value}
-                  onChange={(date: DateObject) => {
-                    onChange(date.isValid ? date : "");
-                  }}
-                  format={"DD/MM/YYYY"}
-                />
+      <div className="relative mx-auto flex justify-center gap-3 space-x-6 p-[10px]  text-black md:flex md:w-[800px]">
+        <form
+          onSubmit={handleSubmit(onSubmitDeparture)}
+          className="space-x-4 p-4"
+        >
+          <div className="flex-cols">
+            <label className="semibold text-2xl">Departure Date</label>
+            <Controller
+              control={control}
+              name="date"
+              rules={{ required: true }} //optional
+              render={({
+                field: { onChange, name, value },
+                fieldState: { invalid, isDirty }, //optional
+                formState: { errors }, //optional, but necessary if you want to show an error message
+              }) => (
+                <>
+                  <DatePicker
+                    value={value}
+                    onChange={(date: DateObject) => {
+                      onChange(date.isValid ? date : "");
+                    }}
+                    format={"DD/MM/YYYY"}
+                  />
 
-                {/* {errors && errors[name] && errors[name].type === "required" && (
+                  {/* {errors && errors[name] && errors[name].type === "required" && (
                   <span>Please select a Date !</span>
                 )} */}
-              </>
-            )}
-          />
+                </>
+              )}
+            />
+          </div>
+          <div className="flex-col">
+            <label className="semibold text-2xl">Arrival Date</label>
+            <br />
+            <Controller
+              control={control}
+              name="date1"
+              rules={{ required: true }}
+              render={({
+                field: { onChange, name, value },
+                fieldState: { invalid, isDirty },
+                formState: { errors },
+              }) => (
+                <>
+                  <DatePicker
+                    value={value}
+                    onChange={(date1: DateObject) => {
+                      onChange(date1?.isValid ? date1 : "");
+                    }}
+                    format={"DD/MM/YYYY"}
+                  />
 
-          <Controller
-            control={control}
-            name="date1"
-            rules={{ required: true }}
-            render={({
-              field: { onChange, name, value },
-              fieldState: { invalid, isDirty },
-              formState: { errors },
-            }) => (
-              <>
-                <label className="space-x-8  text-xl">Arrival Date</label>
-                <DatePicker
-                  value={value}
-                  onChange={(date1: DateObject) => {
-                    onChange(date1?.isValid ? date1 : "");
-                  }}
-                  format={"DD/MM/YYYY"}
-                />
-
-                {/* {errors && errors[name] && errors[name].type === "required" && (
+                  {/* {errors && errors[name] && errors[name].type === "required" && (
                   <span className="text-red">Please select a date !</span>
                 )} */}
-              </>
-            )}
-          />
-
-          <input
-            type="submit"
-            className="mt-10 flex w-full rounded-lg bg-primary p-2 text-xl text-black"
-            value={"Get a Quote!"}
-            onClick={handleClick}
-          />
+                </>
+              )}
+            />
+          </div>
+          <div>
+            <input
+              type="submit"
+              className="mt-10  w-full rounded-lg bg-primary p-2 text-xl text-black shadow-lg"
+              value={"Get a Quote!"}
+              onClick={handleClick}
+            />
+          </div>
         </form>
       </div>
       <div>{showQuote()}</div>
