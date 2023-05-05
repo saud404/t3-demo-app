@@ -115,7 +115,7 @@ const DateChecker = () => {
           </div>
           <div className="flex-col">
             <label className="semibold text-2xl">Arrival Date</label>
-            <br />
+
             <Controller
               control={control}
               name="date1"
