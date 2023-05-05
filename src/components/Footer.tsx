@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import FooterImg from "../assets/images/footer.png";
 const Footer = () => {
-  const [agent, setAgent] = useState(true);
+  const [agent] = useState(true);
 
   return (
     <div className="border-t-4 border-t-primary bg-[#0D0D0D] p-10 text-white md:p-20">
