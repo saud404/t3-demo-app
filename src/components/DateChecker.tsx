@@ -10,16 +10,16 @@ import { useForm, Controller } from "react-hook-form";
 
 const DateChecker = () => {
   const { control, handleSubmit } = useForm();
-  const [departureDate, setDepartureDate] = useState();
-  const [arrivalDate, setArrivalDate] = useState();
+  const [departureDate, setDepartureDate] = useState<DateObject | undefined>();
+  const [arrivalDate, setArrivalDate] = useState<DateObject | undefined>();
   const [isShown, setIsShown] = useState(false);
   // interface PropsType {
   //   date: DateObject;
   //   date1: DateObject;
   // }
   const onSubmitDeparture = ({ date, date1 }) => {
-    const depDate = setDepartureDate(date);
-    const arrDate = setArrivalDate(date1);
+    setDepartureDate(date);
+    setArrivalDate(date1);
     // const totalDays = date - date1;
     // console.log(totalDays);
   };
@@ -42,9 +42,10 @@ const DateChecker = () => {
     // showQuote();
   };
 
+  const days: DateObject =
+    arrivalDate?.format("D") - departureDate?.format("D");
   const showQuote = () => {
     // const totalDays = toDateObject(arrivalDate) - toDateObject(departureDate);
-    const days = arrivalDate?.format("D") - departureDate?.format("D");
 
     return (
       <>
