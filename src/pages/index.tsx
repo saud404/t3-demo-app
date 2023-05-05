@@ -23,7 +23,7 @@ const Home: NextPage = (props) => {
       </Head>
       <main className="bg-gray-200 ">
         <Navbar />
-        <div className=" relative ">
+        <div className="  ">
           {/* <Image src={Hero} alt="Home" className="mx-auto  md:w-full" /> */}
           {/* <img
             src="../assets/images/home.jpg"
