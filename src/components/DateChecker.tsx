@@ -1,6 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+// import TimePicker from "react-ts-timepicker";
+import TimePicker from "react-time-picker";
+import "react-time-picker/dist/TimePicker.css";
+import "react-clock/dist/Clock.css";
 // import DatePicker, { type DateObject } from "react-multi-date-picker";
 import DatePicker, {
   toDateObject,
@@ -42,7 +46,7 @@ const DateChecker = () => {
     setIsShown((current) => !current);
     // showQuote();
   };
-
+  const [value, onChange] = useState("10:00");
   const showQuote = () => {
     // const day1: number | DateObject | undefined = arrivalDate.day;
     // const day2: number | DateObject | undefined = departureDate.day;
@@ -91,7 +95,7 @@ const DateChecker = () => {
           className="space-x-4 p-4"
         >
           <div className="flex-cols">
-            <label className="semibold text-2xl">Departure Date</label>
+            <label className="semibold text-2xl md:pr-6">Departure Date</label>
             <Controller
               control={control}
               name="date"
@@ -116,9 +120,15 @@ const DateChecker = () => {
                 </>
               )}
             />
+            <div className="w-lg mx-auto flex p-5 ">
+              <label className="semibold text-2xl md:pr-4">
+                Departure Time
+              </label>
+              <TimePicker onChange={onChange} value={value} />
+            </div>
           </div>
-          <div className="flex-col">
-            <label className="semibold text-2xl">Arrival Date</label>
+          <div className="">
+            <label className="semibold pr-6 text-2xl">Arrival Date</label>
 
             <Controller
               control={control}
@@ -131,6 +141,7 @@ const DateChecker = () => {
               }) => (
                 <>
                   <DatePicker
+                    className=""
                     value={value}
                     onChange={(date1: DateObject) => {
                       onChange(date1?.isValid ? date1 : "");
@@ -143,6 +154,21 @@ const DateChecker = () => {
                 )} */}
                 </>
               )}
+            />
+            <div className="w-lg mx-auto flex p-5 ">
+              <label className="semibold text-2xl md:pr-4">Arrival Time</label>
+              <TimePicker onChange={onChange} value={value} className="w-md" />
+            </div>
+          </div>
+
+          <div>
+            <label className="semibold inline-flex p-2 text-2xl md:pt-4">
+              Promo Code
+            </label>
+            <input
+              type="text"
+              className="m-2 inline-flex rounded-md p-4 outline-dashed"
+              placeholder="PROMO CODE"
             />
           </div>
           <div>
