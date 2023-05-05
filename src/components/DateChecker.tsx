@@ -99,10 +99,10 @@ const DateChecker = () => {
             <Controller
               control={control}
               name="date"
-              rules={{ required: true }} //optional
+              rules={{ required: true }}
               render={({
                 field: { onChange, name, value },
-                fieldState: { invalid, isDirty }, //optional
+                fieldState: { invalid, isDirty },
                 formState: { errors }, //optional, but necessary if you want to show an error message
               }) => (
                 <>
