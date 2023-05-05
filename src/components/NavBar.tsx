@@ -5,7 +5,7 @@ import { BiMenu } from "react-icons/bi";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../assets/images/Asset 4.svg";
-import { TopHeader } from "./TopHeader";
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
