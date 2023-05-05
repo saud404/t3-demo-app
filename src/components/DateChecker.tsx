@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 // import DatePicker, { type DateObject } from "react-multi-date-picker";
 import DatePicker, {
   toDateObject,
@@ -56,7 +57,7 @@ const DateChecker = () => {
     return (
       <>
         <div className=" w-full border-spacing-2 justify-around rounded-lg border-black bg-slate-200 font-mono shadow-lg">
-          <div className="bold  p-2 text-2xl">
+          <div className="bold  p-4 text-2xl">
             <p>
               Start Date :{" "}
               <span className="pr-2 md:pr-10">
@@ -69,10 +70,13 @@ const DateChecker = () => {
             <p>Rate Days: £{rate} / day</p>
             <p>Current Rate: £{days * rate} </p>
           </div>
-          <div className=" pt-10">
-            <button className=" h-[6vh] w-full rounded-lg bg-primary p-4 text-xl text-black hover:bg-yellow-300">
+          <div className="inline-flex w-[200px] p-8">
+            <Link
+              href="/Details"
+              className=" text-centre rounded-lg bg-primary p-4 text-xl text-black hover:bg-yellow-300"
+            >
               Select
-            </button>
+            </Link>
           </div>
         </div>
       </>
