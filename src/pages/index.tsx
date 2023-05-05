@@ -6,7 +6,7 @@ import Head from "next/head";
 import { SignIn, SignInButton, useUser } from "@clerk/nextjs";
 import { api } from "~/utils/api";
 // import type { RouterOutputs } from "~/utils/api";
-import Image from "next/image";
+// import Image from "next/image";
 import Navbar from "~/components/NavBar";
 import Hero from "../assets/images/home.jpg";
 import Features from "~/components/Features";
@@ -24,12 +24,12 @@ const Home: NextPage = (props) => {
       <main className="bg-white ">
         <Navbar />
         <div className=" relative ">
-          <Image src={Hero} alt="Home" className="mx-auto  md:w-full" />
-          {/* <img
+          {/* <Image src={Hero} alt="Home" className="mx-auto  md:w-full" /> */}
+          <img
             src="../assets/images/home.jpg"
             alt="Home"
             className="mx-auto h-[80vh] md:w-full"
-          /> */}
+          />
 
           <div className=" md:left-94  z-10 mx-auto mt-20 w-full rounded-2xl bg-white p-4  md:right-60 md:top-40 md:w-[70%]">
             <div className="  sm:pl-[0px] md:pl-[300px]">
