@@ -1,32 +1,51 @@
 "use client";
 import React, { useState } from "react";
-import DatePicker from "react-multi-date-picker";
+// import DatePicker, { type DateObject } from "react-multi-date-picker";
+import DatePicker, {
+  toDateObject,
+  type DateObject,
+} from "react-multi-date-picker";
+// import type { Value } from "react-multi-date-pick";
 import { useForm, Controller } from "react-hook-form";
 
 const DateChecker = () => {
   const { control, handleSubmit } = useForm();
-  const [departureDate, setDepartureDate] = useState<Date>();
-  const [arrivalDate, setArrivalDate] = useState<Date>();
+  const [departureDate, setDepartureDate] = useState();
+  const [arrivalDate, setArrivalDate] = useState();
   const [isShown, setIsShown] = useState(false);
-  interface PropsType {
-    date?: Date | null | undefined;
-    date1?: Date | null | undefined;
-  }
-  const onSubmitDeparture = ({ date, date1 }: PropsType) => {
+  // interface PropsType {
+  //   date: DateObject;
+  //   date1: DateObject;
+  // }
+  const onSubmitDeparture = ({ date, date1 }) => {
     const depDate = setDepartureDate(date);
     const arrDate = setArrivalDate(date1);
-    const totalDays: number = date - date1;
-    console.log(totalDays);
+    // const totalDays = date - date1;
+    // console.log(totalDays);
   };
-  const days: number | null =
-    arrivalDate?.format?.("D") - departureDate?.format?.("D");
+  // interface Dimensions {
+  //   arrivalDate: number;
+  //   departureDate: number;
+  // }
+
+  // function calculateDays(dimensions: Dimensions): number {
+  //   return (
+  //     dimensions.arrivalDate?.format?.("D") -
+  //     dimensions.departureDate?.format?.("D")
+  //   );
+  // }
+
   const rate = 20;
-  const handleClick = (event) => {
+  const handleClick = () => {
     // 👇️ toggle shown state
     setIsShown((current) => !current);
     // showQuote();
   };
+
   const showQuote = () => {
+    // const totalDays = toDateObject(arrivalDate) - toDateObject(departureDate);
+    const days = arrivalDate?.format("D") - departureDate?.format("D");
+
     return (
       <>
         <div className="flex w-full border-spacing-2 justify-around rounded-lg border-black bg-slate-200 font-mono shadow-lg">
@@ -70,8 +89,8 @@ const DateChecker = () => {
                 <label className="text-xl">Departure Date</label>
                 <DatePicker
                   value={value}
-                  onChange={(date) => {
-                    onChange(date?.isValid ? date : "");
+                  onChange={(date: DateObject) => {
+                    onChange(date.isValid ? date : "");
                   }}
                   format={"DD/MM/YYYY"}
                 />
@@ -96,7 +115,7 @@ const DateChecker = () => {
                 <label className="space-x-8  text-xl">Arrival Date</label>
                 <DatePicker
                   value={value}
-                  onChange={(date1) => {
+                  onChange={(date1: DateObject) => {
                     onChange(date1?.isValid ? date1 : "");
                   }}
                   format={"DD/MM/YYYY"}
