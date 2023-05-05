@@ -8,7 +8,7 @@ import { api } from "~/utils/api";
 // import type { RouterOutputs } from "~/utils/api";
 import Image from "next/image";
 import Navbar from "~/components/NavBar";
-import Hero from "../assets/images/home.jpg";
+import Hero from "/../assets/images/home.jpg";
 import Features from "~/components/Features";
 import Footer from "~/components/Footer";
 import DateChecker from "~/components/DateChecker";
