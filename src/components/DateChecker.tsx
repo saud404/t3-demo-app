@@ -42,8 +42,7 @@ const DateChecker = () => {
     // showQuote();
   };
 
-  const days: DateObject =
-    arrivalDate?.format("D") - departureDate?.format("D");
+  const days = arrivalDate?.format("D") - departureDate?.format("D");
   const showQuote = () => {
     // const totalDays = toDateObject(arrivalDate) - toDateObject(departureDate);
 
