@@ -20,7 +20,7 @@ const BookingComponent = () => {
       </div> */}
       <div className="w-full ">
         {/* <form className=""> */}
-        <p className="text-center text-xl font-bold  text-gray-700  antialiased md:text-4xl md:text-primary">
+        <p className="mt:4 text-center text-xl font-bold  text-gray-700  antialiased md:text-4xl md:text-primary">
           Exemplary Service Guaranteed!
         </p>
         <div className="items-center justify-center  gap-x-5 p-4 md:flex">
@@ -37,7 +37,7 @@ const BookingComponent = () => {
                 type="date"
                 id="start"
                 name="trip-start"
-                value="2023-01-01"
+                // value="2023-01-01"
                 min="2023-01-01"
                 max="2030-12-31"
               />
@@ -94,7 +94,7 @@ const BookingComponent = () => {
                 type="date"
                 id="arrival"
                 name="trip-start"
-                value="2023-01-01"
+                // value="2023-01-01"
                 min="2023-01-01"
                 max="2030-12-31"
               />
