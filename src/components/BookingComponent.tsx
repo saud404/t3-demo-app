@@ -13,9 +13,10 @@ const BookingComponent = () => {
   const day = date.getDate();
   const month = date.getMonth() + 1;
   const year = date.getFullYear();
-
   // This arrangement can be altered based on how we want the date's format to appear.
-  const currentDate = `${day}-${month}-${year}`;
+  const currentDate = `${year}-${month}-${day}`;
+  const myDate: string = currentDate.toString();
+  const myStringDate = myDate;
   return (
     <>
       {/* <div className=" border-r-1 absolute z-10 mx-auto flex w-[60%]  border border-black bg-blue-400 bg-transparent md:h-[150px]">
@@ -45,8 +46,6 @@ const BookingComponent = () => {
                 type="date"
                 id="start"
                 name="trip-start"
-                // value={currentDate.toString()}
-
                 min="2023-01-01"
                 max="2030-12-31"
               />
@@ -90,10 +89,10 @@ const BookingComponent = () => {
             </div>
           </div>
 
-          <div className="">
+          <div className=" pb-5">
             <label
               htmlFor="start"
-              className="semibold flex-row text-3xl text-black antialiased"
+              className="semibold text-3xl text-black antialiased"
             >
               Arrival:
             </label>
@@ -146,16 +145,16 @@ const BookingComponent = () => {
             </div>
           </div>
 
-          <div className="pt-6 ">
+          <div className=" inline-block space-x-2">
             <input
               type="text"
               id="promo"
               placeholder="Promo Code"
-              className=" h-[5vh] w-32 appearance-none pl-2 placeholder-gray-300 md:px-4 md:py-3  "
+              className="h-[6vh]  w-32 appearance-none  pl-2 placeholder-gray-300 md:m-1 md:h-[6vh] md:px-4 md:py-3  "
             />
             <input
               type="submit"
-              className="  bg-primary p-3 pt-2 text-xl font-semibold text-black shadow-lg hover:bg-yellow-300 md:m-2"
+              className="bg-primary p-3 pt-2 text-xl font-semibold text-black shadow-lg hover:bg-yellow-300 md:m-2"
               value={"Get a Quote!"}
               onClick={handleClick}
             />
