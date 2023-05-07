@@ -27,14 +27,16 @@ export default {
         bermuda: "#78dcca",
       },
       fontFamily: {
-        varela: [""],
+        sans: ["var(--font-inter)"],
+        // varela: [""],
         // Leckerli: ["Varela", "sans-serif"],
       },
-      backgroundImage: {
-        hero: "url('/src/assets/images/home.jpeg')",
-        // signup: "url('/public/assets/images/signupimage.jpeg')",
-        // signin: "url('/public/assets/images/signin.jpeg')",
-      },
+      // backgroundImage: {
+
+      //   hero: "url('/src/assets/images/home.jpeg')",
+      //   // signup: "url('/public/assets/images/signupimage.jpeg')",
+      //   // signin: "url('/public/assets/images/signin.jpeg')",
+      // },
     },
   },
   plugins: [],

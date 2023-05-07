@@ -159,6 +159,19 @@ const DateChecker = () => {
               <label className="semibold text-2xl md:pr-4">Arrival Time</label>
               <TimePicker onChange={onChange} value={value} className="w-md" />
             </div>
+            <div>
+              <label htmlFor="start">Start date:</label>
+
+              <input
+                className="appearance-none rounded border px-2 py-3 text-gray-500 shadow"
+                type="date"
+                id="start"
+                name="trip-start"
+                value="2018-07-22"
+                min="2018-01-01"
+                max="2018-12-31"
+              />
+            </div>
           </div>
 
           <div>
@@ -181,7 +194,7 @@ const DateChecker = () => {
           </div>
         </form>
       </div>
-      <div>{showQuote()}</div>
+      {/* <div>{showQuote()}</div> */}
     </>
   );
 };
