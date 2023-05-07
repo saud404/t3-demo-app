@@ -8,6 +8,14 @@ const BookingComponent = () => {
     setIsShown((current) => !current);
     // showQuote();
   };
+  const date = new Date();
+
+  const day = date.getDate();
+  const month = date.getMonth() + 1;
+  const year = date.getFullYear();
+
+  // This arrangement can be altered based on how we want the date's format to appear.
+  const currentDate = `${day}-${month}-${year}`;
   return (
     <>
       {/* <div className=" border-r-1 absolute z-10 mx-auto flex w-[60%]  border border-black bg-blue-400 bg-transparent md:h-[150px]">
@@ -37,7 +45,8 @@ const BookingComponent = () => {
                 type="date"
                 id="start"
                 name="trip-start"
-                // value="2023-01-01"
+                // value={currentDate.toString()}
+
                 min="2023-01-01"
                 max="2030-12-31"
               />
@@ -94,7 +103,6 @@ const BookingComponent = () => {
                 type="date"
                 id="arrival"
                 name="trip-start"
-                // value="2023-01-01"
                 min="2023-01-01"
                 max="2030-12-31"
               />
