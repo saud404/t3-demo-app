@@ -20,14 +20,14 @@ const BookingComponent = () => {
       </div> */}
       <div className="w-full ">
         {/* <form className=""> */}
-        <p className="text-center text-xl font-bold  text-gray-700 text-opacity-90 antialiased md:text-3xl md:text-primary">
+        <p className="text-center text-xl font-bold  text-gray-700  antialiased md:text-4xl md:text-primary">
           Exemplary Service Guaranteed!
         </p>
         <div className="items-center justify-center  gap-x-5 p-4 md:flex">
           <div className="flex-col items-center justify-center">
             <label
               htmlFor="start"
-              className="semibold flex-row text-2xl text-black antialiased"
+              className="semibold flex-row text-3xl text-black antialiased"
             >
               Departure :
             </label>
@@ -41,7 +41,7 @@ const BookingComponent = () => {
                 min="2023-01-01"
                 max="2030-12-31"
               />
-              <div className="w-30 ml-2  rounded-sm bg-white p-4 md:p-[10px] ">
+              <div className="w-30 ml-2 rounded-sm bg-white p-4 md:p-[10px] ">
                 <div className="">
                   <select
                     name="hours"
@@ -84,7 +84,7 @@ const BookingComponent = () => {
           <div className="">
             <label
               htmlFor="start"
-              className="semibold flex-row text-2xl text-black antialiased"
+              className="semibold flex-row text-3xl text-black antialiased"
             >
               Arrival:
             </label>

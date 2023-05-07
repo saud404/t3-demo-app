@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../assets/images/Asset 4.svg";
+import Logo from "../assets/images/airpark-logo.jpeg";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -25,9 +25,9 @@ const Navbar = () => {
             <Image
               src={Logo}
               alt="Logo"
-              width={48}
-              height={48}
-              className="h-20 w-40"
+              width={40}
+              height={40}
+              className="w-24 rounded-full bg-cover p-2 "
             />
           </Link>
           <button className="text-2xl lg:hidden" onClick={() => setOpen(!open)}>

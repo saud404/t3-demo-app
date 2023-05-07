@@ -37,7 +37,7 @@ const Home: NextPage = (props) => {
             className=" w-[100%] bg-cover bg-left bg-no-repeat md:h-[90vh] md:bg-fixed"
           />
 
-          <div className="transparent z-10 mx-auto w-[100%] rounded-xl bg-slate-300 bg-opacity-30 p-5 sm:right-[150px] sm:top-[100px] sm:w-[1200px] md:absolute md:right-[300px] md:top-[200px] md:w-[1200px]  md:bg-opacity-60">
+          <div className="transparent z-10 mx-auto w-[100%] rounded-xl bg-slate-300 bg-opacity-30 sm:right-[150px] sm:top-[100px] sm:w-[1200px] md:absolute md:right-[300px] md:top-[200px] md:mt-[150px] md:w-[1200px] md:bg-opacity-70  md:p-5">
             {/* <DateChecker /> */}
             <BookingComponent />
           </div>
