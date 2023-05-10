@@ -9,26 +9,31 @@ import { FaPlay } from "react-icons/fa";
 import { MoonIcon } from "@heroicons/react/solid";
 import { SunIcon } from "@heroicons/react/solid";
 import MyDatePicker from "~/components/MyDatePicker";
-
+import { Message_data } from "../Context/context";
+import { useContext } from "react";
 export const BookingCard = ({ toggle, settoggle }) => {
-  const { push } = useRouter();
+  const { message } = useContext(Message_data);
+  const router = useRouter();
   const handleClick = () => {
     console.log("clicked");
     // console.log(startDate);
     // console.log(endDate);
     // const totalDays = startDate.getDay() - endDate.getDay();
-    push("/home");
+    router.push("/home");
     //return props.totalDays;
   };
   const handleCancelClick = () => {
     console.log("clicked");
-    push("/");
+    router.push("/");
   };
   return (
     <div className="md:w-lg border-1 w-full border-black bg-green-200 pt-4 shadow-xl md:w-1/2">
       <div className="flex justify-between p-4 font-mono antialiased">
         <p className="text-xl font-bold md:text-2xl ">Total Parking Cost</p>
-        <p className="text-xl font-bold md:text-2xl">£ 129</p>
+        <div className="flex ">
+          <p className="text-xl font-bold md:text-2xl"> £ </p>
+          <p className="text-xl font-bold md:text-2xl">{message * 10}</p>
+        </div>
       </div>
       <hr className=" border-1 w-full border-black" />
       <div className="pt-6">
@@ -41,8 +46,8 @@ export const BookingCard = ({ toggle, settoggle }) => {
           <p className="text-lg  md:text-xl">12-10-2021</p>
         </div>
         <div className="flex justify-between pb-4 pl-4 pr-4  antialiased">
-          <p className="text-lg  md:text-xl ">Total Days</p>
-          <p className="text-lg  md:text-xl"> Days</p>
+          <p className="text-lg  md:text-xl ">Total Days </p>
+          <p className="text-lg  md:text-xl"> {message}</p>
         </div>
         <div className="flex justify-between pb-4 pl-4 pr-4  antialiased">
           <p className="text-lg  md:text-xl ">Per Day Rate</p>

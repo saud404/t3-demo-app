@@ -1,19 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 // CSS Modules, react-datepicker-cssmodules.css//
 import "react-datepicker/dist/react-datepicker-cssmodules.css";
-import { useRouter } from "next/router";
 // import { TimePicker } from "react-ios-time-picker";
-interface PropsType {
-  totalDays: number;
-}
-
-const MyDatePicker: React.FC = (props: PropsType) => {
-  const { push } = useRouter();
+import { Message_data } from "../Context/context";
+import { useRouter } from "next/router";
+const MyDatePicker: React.FC = () => {
+  const { message, setMessage } = useContext(Message_data);
+  const router = useRouter();
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
-
+  // const [totalDays, setTotalDays] = useState();
   const [value, setValue] = useState("10:00");
   //   const [end, setEnd] = useState("10:00");
 
@@ -28,16 +26,23 @@ const MyDatePicker: React.FC = (props: PropsType) => {
   };
   const handleEndDateChange = (endDate: Date) => {
     setEndDate(endDate);
-    console.log(endDate);
+    // console.log(endDate);
   };
   const handleClick = () => {
-    console.log("clicked");
+    // console.log("clicked");
     // console.log(startDate);
     // console.log(endDate);
-    const totalDays = startDate.getDay() - endDate.getDay();
-    push("/booking");
-    //return props.totalDays;
+    // const totalDays = startDate.getDay() - endDate.getDay();
+    const data = endDate.getDay() - startDate.getDay();
+    setMessage(data);
+    router.push("/booking");
+    //return totalDays;
   };
+  // function sendData() {
+  //   const data = startDate.getDay() - endDate.getDay();
+  //   setMessage(data);
+  // }
+
   return (
     <>
       <div className="border-1 container  mx-auto border-black p-6 shadow-lg ">
@@ -101,8 +106,8 @@ const MyDatePicker: React.FC = (props: PropsType) => {
             <div className="">
               <DatePicker
                 className="border-1 w-[160px] border-black p-4 text-xl  shadow-lg md:w-[200px]"
-                selected={startDate}
-                onChange={handleStartDateChange}
+                selected={endDate}
+                onChange={handleEndDateChange}
               />
             </div>
             <div className="w-40  bg-white p-4 shadow-xl">
