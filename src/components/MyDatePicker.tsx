@@ -1,9 +1,8 @@
 import React, { useState, useContext } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-// CSS Modules, react-datepicker-cssmodules.css//
 import "react-datepicker/dist/react-datepicker-cssmodules.css";
-// import { TimePicker } from "react-ios-time-picker";
+
 import { Message_data } from "../Context/context";
 import { useRouter } from "next/router";
 const MyDatePicker: React.FC = () => {
