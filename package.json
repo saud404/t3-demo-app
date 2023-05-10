@@ -22,7 +22,6 @@
     "@trpc/next": "^10.18.0",
     "@trpc/react-query": "^10.18.0",
     "@trpc/server": "^10.18.0",
-    "basic-react-timepicker": "^1.0.0",
     "dayjs": "^1.11.7",
     "heroicons": "^2.0.18",
     "next": "^13.2.4",
