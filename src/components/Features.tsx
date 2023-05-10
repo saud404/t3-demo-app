@@ -6,9 +6,9 @@ import Park from "../assets/images/park.webp";
 import Meet from "../assets/images/meet.webp";
 const Features = () => {
   return (
-    <div className="mb-10  bg-white  pt-8 text-center text-4xl font-extrabold text-black">
+    <div className="mb-10 pt-8 text-center  text-xl font-bold text-black antialiased antialiased md:text-4xl md:font-extrabold">
       HOW DOES IT WORK?
-      <div className="mx-auto grid grid-cols-1 justify-center pb-10 md:grid-cols-2 lg:grid-cols-4 ">
+      <div className="mx-auto grid grid-cols-1 justify-center pb-10 antialiased md:grid-cols-2 lg:grid-cols-4 ">
         <div className="col-span-1 pb-8">
           <Image
             src={Book}
@@ -17,7 +17,7 @@ const Features = () => {
             height={300}
             className="mx-auto"
           />
-          <span className="text-center text-2xl font-bold">
+          <span className="text-center text-xl font-bold antialiased md:text-2xl">
             Book Securely <br />
             Online
           </span>
@@ -30,7 +30,7 @@ const Features = () => {
             height={300}
             className="mx-auto"
           />
-          <span className="text-center text-2xl font-bold">
+          <span className="text-center text-xl font-bold antialiased md:text-2xl">
             We collect your <br />
             car at the airport
           </span>
@@ -43,7 +43,7 @@ const Features = () => {
             height={300}
             className="mx-auto"
           />
-          <span className="text-center text-2xl font-bold">
+          <span className="text-center text-xl font-bold antialiased md:text-2xl">
             We park your car <br />
             in our secure car park
           </span>
@@ -56,7 +56,7 @@ const Features = () => {
             width={300}
             height={300}
           />
-          <span className="text-center text-2xl font-bold">
+          <span className="text-center text-xl font-bold antialiased md:text-2xl">
             We meet you with your <br />
             car at the airport
           </span>

@@ -1,14 +1,18 @@
 import React from "react";
+import Footer from "~/components/Footer";
 import Navbar from "~/components/NavBar";
+import PaymentComponent from "~/components/PaymentComponent";
 import PaymentFooter from "~/components/PaymentFooter";
 
-const Meeting = (props) => {
+const payment = (props) => {
   return (
     <div>
       <Navbar />
+      <PaymentComponent />
       <PaymentFooter />
+      <Footer />
     </div>
   );
 };
 
-export default Meeting;
+export default payment;

@@ -1,19 +1,30 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import FooterImg from "../assets/images/footer.png";
+// import FooterImg from "../assets/images/footer.png";
+import Logo from "../assets/images/airpark-logo.jpeg";
 const Footer = () => {
   const [agent] = useState(true);
 
   return (
-    <div className="border-t-4 border-t-primary bg-[#0D0D0D] p-10 text-white md:p-20">
+    <div className="border-t-4 border-t-primary bg-[#0D0D0D] p-10 font-mono text-xl text-white antialiased md:p-20">
       <div className="-m-3 flex flex-wrap">
         <div className="w-6/12 p-3 lg:w-3/12">
-          <Image className="w-36" src={FooterImg} alt="Footer Loge" />
+          <Link href="/">
+            <Image
+              src={Logo}
+              alt="Logo"
+              width={40}
+              height={40}
+              className="w-40 rounded-full bg-cover p-2 "
+            />
+          </Link>
         </div>
 
         <div className="w-6/12 p-3 lg:w-3/12">
-          <h5 className="mb-2.5 text-lg font-bold uppercase">Useful Links</h5>
+          <h5 className="mb-2.5 border-b-2 border-primary text-lg font-semibold uppercase antialiased">
+            Useful Links
+          </h5>
           <ul className="mb-0 list-none space-y-1">
             <li>
               <a
@@ -46,7 +57,9 @@ const Footer = () => {
         </div>
 
         <div className="w-6/12 p-3 lg:w-3/12">
-          <h5 className="mb-2.5 text-lg font-bold uppercase">Useful Links</h5>
+          <h5 className="mb-2.5 border-b-2 border-primary text-lg font-semibold uppercase">
+            Useful Links
+          </h5>
 
           <ul className="mb-0 list-none space-y-1">
             <li>
@@ -76,7 +89,9 @@ const Footer = () => {
         </div>
 
         <div className="w-6/12 p-3 lg:w-3/12">
-          <h5 className="mb-2.5 text-lg font-bold uppercase">Head Office</h5>
+          <h5 className="mb-2.5 border-b-2 border-primary text-lg font-semibold uppercase">
+            Head Office
+          </h5>
 
           <ul className="mb-0 list-none space-y-1">
             <li>

@@ -4,6 +4,16 @@ import * as yup from "yup";
 import z from "zod";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
+
+//TODO: Add validation for the form using zod
+//TODO: Add calculate days function
+//TODO: Add linkage with other forms
+//TODO: Use the same things for Personal Detail Form
+//TODO: Fix the UI of the Booking Form
+//TODO: Check how to provide errors in the form or not for this specific form
+//TODO: Try to add form data into database after validation
+//TODO: Best is tht you show the booking card on this same page
+//TODO: Once the data is inserted into the DB and calculated delete all the libraries and redundant code
 interface IFormInput {
   departureDate: Date | string;
   departureTimeMinutes: number;

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { type NextPage } from "next";
 import Head from "next/head";
 import { Inter } from "next/font/google";
-
+// import { TimePicker } from "react-ios-time-picker";
 import { SignIn, SignInButton, useUser } from "@clerk/nextjs";
 import { api } from "~/utils/api";
 // import type { RouterOutputs } from "~/utils/api";
@@ -15,10 +15,21 @@ import Features from "~/components/Features";
 import Footer from "~/components/Footer";
 // import DateChecker from "~/components/DateChecker";
 import BookingComponent from "~/components/BookingComponent";
+import Parking from "~/components/Parking";
+import MyDatePicker from "~/components/MyDatePicker";
+import PaymentFooter from "~/components/PaymentFooter";
 const inter = Inter({
   subsets: ["latin-ext"],
 });
 const Home: NextPage = (props) => {
+  // const [value, setValue] = useState("10:00");
+
+  // const onChange = (timeValue) => {
+  //   setValue(timeValue);
+  // };
+  // if (typeof window !== "undefined") {
+  //   (<TimePicker />), document.getElementById("root");
+  // }
   return (
     <>
       <Head>
@@ -37,12 +48,16 @@ const Home: NextPage = (props) => {
             className=" w-[100%] bg-cover bg-left bg-no-repeat md:h-[90vh] md:bg-fixed"
           />
 
-          <div className="transparent z-10 mx-auto w-[100%] rounded-xl bg-slate-300 bg-opacity-30 sm:right-[150px] sm:top-[100px] sm:w-[1200px] md:absolute md:right-[300px] md:top-[200px] md:mt-[150px] md:w-[1200px] md:bg-opacity-70  md:p-5">
+          <div className=" z-10 mx-auto  bg-slate-100 shadow-lg sm:right-[150px] sm:top-[100px] md:absolute md:right-[200px] md:top-[200px] md:mt-[150px]  md:bg-opacity-70  ">
             {/* <DateChecker /> */}
-            <BookingComponent />
+
+            {/* <BookingComponent /> */}
+            <MyDatePicker />
           </div>
         </div>
         <div>
+          {/* <Parking /> */}
+          {/* <TimePicker onChange={onChange} value={value} /> */}
           <Features />
         </div>
         {/* </div> */}
@@ -71,6 +86,7 @@ const Home: NextPage = (props) => {
 
         {/* <Footer /> */}
       </main>
+      <PaymentFooter />
       <Footer />
     </>
   );
