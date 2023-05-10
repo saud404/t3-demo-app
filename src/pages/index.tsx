@@ -14,8 +14,8 @@ import HeroImage from "~/assets/images/hero.jpg";
 import Features from "~/components/Features";
 import Footer from "~/components/Footer";
 // import DateChecker from "~/components/DateChecker";
-import BookingComponent from "~/components/BookingComponent";
-import Parking from "~/components/Parking";
+// import BookingComponent from "~/components/BookingComponent";
+// import Parking from "~/components/Parking";
 import MyDatePicker from "~/components/MyDatePicker";
 import PaymentFooter from "~/components/PaymentFooter";
 const inter = Inter({
