@@ -6,11 +6,11 @@ import Context from "../Context/context";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <Context>
-      <ClerkProvider {...pageProps}>
+    <ClerkProvider {...pageProps}>
+      <Context>
         <Component {...pageProps} />
-      </ClerkProvider>
-    </Context>
+      </Context>
+    </ClerkProvider>
   );
 };
 
