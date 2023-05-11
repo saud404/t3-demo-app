@@ -103,8 +103,6 @@ const Contact = (props) => {
             src={Map}
             alt="map"
             className=" h-[500px] w-[500px]  bg-cover p-2"
-
-            // className="mt-6 pr-2"
           />
         </div>
       </div>
