@@ -18,6 +18,7 @@ import Footer from "~/components/Footer";
 // import Parking from "~/components/Parking";
 import MyDatePicker from "~/components/MyDatePicker";
 import PaymentFooter from "~/components/PaymentFooter";
+import ServicesComponent from "~/components/ServicesComponent";
 const inter = Inter({
   subsets: ["latin-ext"],
 });
@@ -59,6 +60,7 @@ const Home: NextPage = (props) => {
           {/* <Parking /> */}
           {/* <TimePicker onChange={onChange} value={value} /> */}
           <Features />
+          <ServicesComponent />
         </div>
         {/* </div> */}
         {/* <PreBook />
