@@ -1,3 +1,4 @@
+"use client";
 import {
   CategoryScale,
   Chart as ChartJS,
@@ -53,6 +54,12 @@ export const data = {
   ],
 };
 const LineChart = () => {
-  return <Line data={data} />;
+  return (
+    <>
+      <div>
+        <Line data={data} />;
+      </div>
+    </>
+  );
 };
 export default LineChart;

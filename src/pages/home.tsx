@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import DetailForm from "~/components/DetailForm";
 import Footer from "~/components/Footer";

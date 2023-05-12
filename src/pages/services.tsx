@@ -6,17 +6,19 @@ import ServicesComponent from "~/components/ServicesComponent";
 
 const Services = (props) => {
   return (
-    <div>
-      <Navbar />
-      <div className="flex h-[100px] justify-center bg-gray-100 sm:h-[100px] md:h-[150px] lg:h-[200px]">
-        <h1 className="text-centre my-auto justify-center text-6xl text-primary ">
-          Our Services
-        </h1>
+    <>
+      <div>
+        <Navbar />
+        <div className="flex h-[100px] justify-center bg-gray-100 sm:h-[100px] md:h-[150px] lg:h-[200px]">
+          <h1 className="text-centre my-auto justify-center text-6xl text-primary ">
+            Our Services
+          </h1>
+        </div>
+        <ServicesComponent />
+        <PaymentFooter />
+        <Footer />
       </div>
-      <ServicesComponent />
-      <PaymentFooter />
-      <Footer />
-    </div>
+    </>
   );
 };
 

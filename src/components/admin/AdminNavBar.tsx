@@ -19,6 +19,7 @@ const AdminNavBar = () => {
       {/* <div className="">
         <TopHeader />
       </div> */}
+
       <header className="sticky top-0 z-20 flex items-center justify-between border-b-4 border-b-primary bg-header px-10 pt-10 font-medium text-white antialiased md:px-16">
         <div className="z-10 flex w-full items-center justify-between lg:w-auto">
           <Link href="/">

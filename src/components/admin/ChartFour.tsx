@@ -127,24 +127,27 @@ const ChartFour: React.FC = () => {
   };
 
   return (
-    <div className="border-stroke dark:border-strokedark dark:bg-boxdark col-span-12 rounded-sm border bg-white px-5 pb-5 pt-7.5 shadow-default sm:px-7.5">
-      <div>
-        <h3 className="text-xl font-semibold text-black dark:text-white">
-          Visitors Analytics
-        </h3>
-      </div>
+    <>
+      {" "}
+      <div className="border-stroke dark:border-strokedark dark:bg-boxdark col-span-12 rounded-sm border bg-white px-5 pb-5 pt-7.5 shadow-default sm:px-7.5">
+        <div>
+          <h3 className="text-xl font-semibold text-black dark:text-white">
+            Visitors Analytics
+          </h3>
+        </div>
 
-      <div className="mb-2">
-        <div id="chartFour" className="-ml-5">
-          <ReactApexChart
-            options={options}
-            series={state.series}
-            type="bar"
-            height={350}
-          />
+        <div className="mb-2">
+          <div id="chartFour" className="-ml-5">
+            <ReactApexChart
+              options={options}
+              series={state.series}
+              type="bar"
+              height={350}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
