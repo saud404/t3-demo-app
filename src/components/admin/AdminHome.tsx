@@ -4,8 +4,6 @@ import AdminFooter from "./AdminFooter";
 import BarChart from "../ٖFleetCharts/BarChart";
 import LineChart from "../ٖFleetCharts/LineChart";
 import Head from "next/head";
-import Chartist from "chartist";
-import Line from "chartist";
 
 <Head>
   <link
@@ -212,7 +210,7 @@ const AdminHome = () => {
   //   }
   //   return false;
   // }
-
+  debugger;
   return (
     <>
       <AdminNavBar />
@@ -222,7 +220,6 @@ const AdminHome = () => {
         </div>
 
         <BarChart />
-
         <div className="p-4 text-center text-2xl font-bold ">
           <p>Yearly Revenue</p>
         </div>
